@@ -1199,9 +1199,35 @@ def comman(a,b):
 a = [1,2,3,4,6,7]
 b = [2,3,4,5,6]
 print(comman(a,b))
-"""
+
 a = [1,2,3,4,6,7]
 b = [2,3,4,5,6]
 print(set(a) and set(b))
 
+Write a Python program to change the position of every n-th value with the (n+1)th in a list.
+Sample
+list: [0, 1, 2, 3, 4, 5]
+Expected Output: [1, 0, 3, 2, 5, 4]
 
+def swap(a,pos1,pos2):
+    a[pos1],a[pos2] = a[pos2],a[pos1]
+    return a
+a = [0, 1, 2, 3, 4, 5]
+d = swap(a,0,1)
+e = swap(a,2,3)
+f = swap(a,4,5)
+print(f)
+#[1, 0, 3, 2, 5, 4]
+a = [11,22,33]
+b = str(a)
+d = int("".join(b))
+print(d)
+"""
+
+def string(a):
+    for i in a:
+        b = str(i)
+        d = int("".join(b))
+        return(d)
+a = [11,22,33]
+print(string(a))
