@@ -1218,16 +1218,198 @@ e = swap(a,2,3)
 f = swap(a,4,5)
 print(f)
 #[1, 0, 3, 2, 5, 4]
+Write a Python program to convert a list of multiple integers into a single integer.
 a = [11,22,33]
 b = str(a)
 d = int("".join(b))
 print(d)
-"""
 
 def string(a):
-    for i in a:
-        b = str(i)
-        d = int("".join(b))
-        return(d)
+    b = [str(i) for i in a]
+    d = int("".join(b))
+    return (d)
+
 a = [11,22,33]
 print(string(a))
+# this is not working i don't know why but whenever you are using list compreshion then he worked
+def string1(c):
+    for i in c:
+        d = str(i)
+        e = int("".join(d))
+        return e
+c = [11,22,33]
+print(string1(c))
+
+obj = {}
+for i in range(1,21):
+    obj[str(i)] = []
+print(obj)
+word_list = ['be','have','do','say','get','make','go','know','take','see','come','think',
+     'look','want','give','use','find','tell','ask','work','seem','feel','leave','call']
+
+def splitLst(x):
+    dictionary = dict()
+    for word in x:
+       # print(word)
+        f = word[0]
+        #print(f)
+        if f in dictionary.keys():
+            #print('if',f)
+            dictionary[f].append(word)
+            #print(dictionary[f])
+        else:
+            dictionary[f] = [word]
+            #print(dictionary[f])
+
+    return dictionary
+
+x = ['be','have','do','say','get','make','go','know','take','see','come','think',
+     'look','want','give','use','find','tell','ask','work','seem','feel','leave','call']
+print(splitLst(x))
+
+6. Write a Python program to add 'ing' at the end of a given string (length should be at least 3).
+If the given string already ends with 'ing' then add 'ly' instead. If the string length of the given string is less than 3,
+leave it unchanged. Go to the editor
+Sample String : 'abc'
+Expected Result : 'abcing'
+Sample String : 'string'
+Expected Result : 'stringly'
+
+#print(l)
+def acs(a):
+    l = len(a)
+    for i in a:
+        if l<2:
+            return a
+        elif a[-3:] == 'ing':
+            return a+'ly'
+
+        else:
+            return a+'ing'
+a = 'abc'
+print(acs(a))
+
+Write a Python program to find the first appearance of the substring 'not' and 'poor' from a given string,
+if 'not' follows the 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.
+def acs(a):
+    substing = 'not that poor'
+    d = 'good'
+    for i in a:
+        if i == substing:
+            return a.replace(substing,d)
+
+a = 'The lyrics is not that poor!'
+'The lyrics is poor!'
+print(acs(a))
+
+a = 'The lyrics is not that poor!'
+'The lyrics is poor!'
+substring = 'not'
+e = 'good'
+d = a.split()
+
+#please solve after some time
+if substring in d:
+    #print('yes')
+    print(a.replace(a[])
+
+
+def not_poor(str1):
+    snot = str1.find('not')
+    spoor = str1.find('poor')
+
+    if spoor > snot and snot > 0 and spoor > 0:
+        str1 = str1.replace(str1[snot:(spoor + 4)], 'good')
+        return str1
+    else:
+        return str1
+
+
+print(not_poor('The lyrics is not that poor!'))
+print(not_poor('The lyrics is poor!'))
+
+#Write a Python function that takes a list of words and return the longest word and the length of the longest one.
+def word_length(a):
+    word_len = []
+    for i in a:
+        word_len.append((len(i),i))
+    word_len.sort()
+
+    return word_len[-1]
+
+a = ['php','excersice','dinesh']
+print(word_length(a))
+z = [1,2,3,4]
+a = 4
+n = ''
+for i in range(0,len(z)):
+    if(i != a):
+
+        n += str[i]
+print(n)
+
+a =20
+b =50
+c =b%a
+print(c)
+def solve(a, b):
+   return b if a == 0 else solve(b % a, a)
+print(solve(20, 50))
+
+def solve(a):
+   a = [1, 3, 5]
+a = [2, 4, 6]
+print(a)
+solve(a)
+#print(a)
+def func():
+    global value
+    value = "Local"
+value = "Global"
+func()
+print(value)
+
+a = [1,2]
+print(a*3)
+tuple return list after sort
+numbers = (4, 7, 19, 2, 89, 45, 72, 22)
+print(type(numbers))
+sorted_numbers = sorted(numbers)
+print(sorted_numbers)
+
+#filter return object of filter not list
+numbers = (4, 7, 19, 2, 89, 45, 72, 22)
+sorted_numbers = sorted(numbers)
+even = lambda a: a % 2 == 0
+even_numbers = filter(even, sorted_numbers)
+print(type(even_numbers))
+
+word = "Python Programming"
+n = len(word)
+word1 = word.upper()
+word2 = word.lower()
+converted_word = ""
+for i in range(n):
+    print(i)
+    if i % 2 == 0:
+        converted_word += word2[i]
+    else:
+        converted_word += word1[i]
+print(converted_word)
+
+print(type(type(int)))
+a = [12,23,4,5]
+a.pop(1)
+print(a)
+
+a = {1,2,3}
+b = {4,5,6}
+c = a + b
+print(c)
+
+s1 = {1, 2, 3, 4, 5}
+s2 = {2, 4, 6}
+print(s1 ^ s2)
+"""
+a = [[], "abc", [0], 1, 0]
+print(list(filter(bool, a)))
