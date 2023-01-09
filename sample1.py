@@ -1410,6 +1410,64 @@ print(c)
 s1 = {1, 2, 3, 4, 5}
 s2 = {2, 4, 6}
 print(s1 ^ s2)
-"""
+
 a = [[], "abc", [0], 1, 0]
-print(list(filter(bool, a)))
+print(list(filter(bool, a)))#may be zero and empty list is not come there
+
+a = ('banana','apple','mango','coco','rasberry')
+(orange,lemon,*rio) = a
+print(orange)
+print(rio)
+print(lemon)
+
+x = 'awesome'
+def myfunc():
+  global x
+  x = "fantastic"
+  print('python is ' + x)
+
+myfunc()
+
+print("Python is " + x)
+
+a = 34E34
+print(type(a))
+
+import random
+for i in random.
+
+reveresd a number
+num = 1234
+reversed_num = 0
+
+while num != 0:
+    digit = num % 10
+    print('digit',digit)
+    reversed_num = reversed_num * 10 + digit
+    print('reversed',reversed_num)
+    num //=10
+    #print('num',num)
+
+print("Reversed Number: " + str(reversed_num))
+
+#check armsstrong ya not
+a = 153
+sum = 0
+t = a
+while t>0:
+    b = t%10
+    #print(b)
+    sum += b**3
+    t//=10
+if a==sum:
+    print('yes')
+else:
+    print('no')
+
+a = int(input("Enter the no. : "))
+if a%2!=0 and a==2:
+
+    print('prime')
+else:
+    print("not prime")
+"""
